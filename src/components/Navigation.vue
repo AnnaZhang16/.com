@@ -1,13 +1,23 @@
 <template>
   <div>
     <nav>
-      <router-link
-        class="spacing"
-        v-for="routes in links"
-        v-bind:key="routes.id"
-        :to="`${routes.page}`"
-        >{{ routes.text }}</router-link
-      >
+      <b-container class="bv-example-row">
+        <b-row>
+          <b-col md="4">1 of 3</b-col>
+          <b-col md="4">2 of 3</b-col>
+          <b-col md="4">3 of 3</b-col>
+        </b-row>
+        <hr />
+        <b-row>
+          <router-link
+            class="spacing"
+            v-for="routes in links"
+            v-bind:key="routes.id"
+            :to="`${routes.page}`"
+            ><b-col>{{ routes.text }}</b-col></router-link
+          >
+        </b-row>
+      </b-container>
     </nav>
   </div>
 </template>
